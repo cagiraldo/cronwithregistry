@@ -1,0 +1,25 @@
+
+
+ <table>
+    <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Porcentaje</th>
+      <th>Crecimiento</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= for topic <- @results do %>
+    <tr>
+      <td><%= topic.titulo %></td>
+      <td><%= topic.descripcion %></td>
+      <td><%= topic.porcentaje %></td>
+      <td><%= topic.crecimiento %></td>
+      <td> <button phx-click="delete" phx-value-id="<%= topic.id %>">Eliminar</button></td>
+    </tr>
+    <% end %>
+    </tbody>
+
+    </table>
