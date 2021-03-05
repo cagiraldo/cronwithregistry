@@ -12,6 +12,7 @@ do
   sleep 2
 done
 
+
 bin="/app/bin/cronwithregistry"
 eval "$bin eval \"Cronwithregistry.Release.migrate\""
 # start the elixir application
